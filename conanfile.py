@@ -22,7 +22,7 @@ class GccConan(ConanFileBase):
         self.env_info.CXX = cxx
 
     def build_requirements(self):
-        if self.options.target or tools.cross_building(self.settings):
+        if self.options.target or tools.cross_building(self):
             self.build_requires("binutils/2.32@bincrafters/testing")
 
     @property
